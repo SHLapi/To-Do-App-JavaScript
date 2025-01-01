@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>To-Do App</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </html>
+  <body>
+    <div class="todoWrapper">
+      <h1>Today's Tasks</h1>
+        <input 
+          name="todoInput"
+          type="text" 
+          class="todoInput" 
+          placeholder="Add a new task">
+        <button 
+          type="submit"
+          class="todoBtn" 
+          onclick="{addTodo()}">Add Task</button>
+        <ul class="todoList">
+          <!-- tasks goes Here -->
+        </ul>
+  </body>
+  <script src="app.js"></script>
+</html>

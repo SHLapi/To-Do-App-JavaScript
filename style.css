@@ -1,0 +1,96 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #E1EACD;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.todoWrapper {
+  background: #BAD8B6;
+  margin-top: 5rem;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #60395f;
+}
+
+.todoInput {
+  outline: none;
+  background: none;
+  border: 1.5px solid #8D77AB;
+  border-radius: 10px 0px 0px 10px;
+  padding: 0.7rem 1rem;
+  margin: 1rem 0 2rem 0;
+  width: 300px;
+  font-size: 1.2rem;
+  color: #684066;
+}
+
+.todoBtn {
+  position: relative;
+  background: #8D77AB;
+  color: #fff;
+  border: none;
+  border-radius: 0px 10px 10px 0px;
+  padding: 0.7rem;
+  height: 3rem ;
+  cursor: pointer;
+  left: -5px;
+  font-size: 1.2rem;
+}
+
+ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  font-size: 1.2rem;
+  border-radius: 10px ;
+  color : #fff;
+  padding: 0.6rem 1rem;
+  margin: 0.5rem 0;
+  width: 100%;
+  cursor: pointer;
+  background-color: #8D77AB;
+}
+ul li span{
+  color: #fff;
+  border-radius: 100px;
+  padding: 0.2rem 0.5rem;
+  cursor: pointer;
+}
+ul li span:hover{
+  background: #d01616;
+}
+
+.todoList{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.completed{
+  text-decoration: line-through;
+  color: #ffffff9a;
+}
+
+
+
+
