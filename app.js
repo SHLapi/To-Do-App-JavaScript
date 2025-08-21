@@ -1,19 +1,31 @@
-let input = document.querySelector('.todoInput'); 
-let btn = document.querySelector('.todoBtn');
-let ul = document.querySelector('.todoList');
+const btn = document.querySelector('.todoBtn');
+const form = document.querySelector('.todoWrapper'); // Select the form
+const input = document.querySelector('.todoInput');
+const ul = document.querySelector('.todoList');
+
+
+
+
+// Event listener for form submission
+form.addEventListener('submit', (e) => {
+  e.preventDefault(); 
+  addTodo();
+});
 
 function addTodo() {
-  let task = input.value;
-    if (input.value == ''){
-      alert('Please enter a Task')
-    } else {
-      let span = document.createElement('span');
-      let li = document.createElement('li');
-      li.innerHTML = task;
-      ul.appendChild(li);
-      span.innerHTML = 'X';
-      li.appendChild(span);
-    }
+  const task = input.value.trim();
+  if (task === '') {
+    return; 
+  }
+
+  const li = document.createElement('li');
+  li.innerHTML = task;
+
+  const span = document.createElement('span');
+  span.innerHTML = 'x';
+  li.appendChild(span);
+  ul.appendChild(li);
+
   input.value = '';
   saveTodo();
 }
@@ -24,7 +36,7 @@ ul.addEventListener('click', (e) => {
     saveTodo();
   }
   if (e.target.tagName === 'SPAN'){
-    e.target.parentElement.style.display = 'none';
+    e.target.parentElement.remove();
     saveTodo();
   }
 });

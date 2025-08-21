@@ -6,20 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </html>
   <body>
-    <div class="todoWrapper">
+    <form class="todoWrapper">
       <h1>Today's Tasks</h1>
         <input 
           name="todoInput"
           type="text" 
           class="todoInput" 
-          placeholder="Add a new task">
+          placeholder="Add a new task"
+          required
+          />
         <button 
           type="submit"
           class="todoBtn" 
-          onclick="{addTodo()}">Add Task</button>
+          aria-label="Add Task">
+          Add Task
+        </button>
+    
+    <div class="todoListWrapper">
         <ul class="todoList">
           <!-- tasks goes Here -->
         </ul>
+    </div>
+    <div class="todoFooter">
+      <p>Made with ❤️ by Abullah Shalabi</p>
+    </div>
+  </form>
   </body>
   <script src="app.js"></script>
 </html>
