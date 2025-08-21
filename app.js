@@ -1,11 +1,9 @@
-const btn = document.querySelector('.todoBtn');
-const form = document.querySelector('.todoWrapper'); // Select the form
-const input = document.querySelector('.todoInput');
-const ul = document.querySelector('.todoList');
-
-
-
-
+const btn = document.querySelector('.todoBtn'); // Select the button
+const form = document.querySelector('.todoForm'); // Select the form
+const input = document.querySelector('.todoInput'); // Select the input field
+const ul = document.querySelector('.todoList'); // Select the unordered list
+const todoListWrapper = document.querySelector('.todoListWrapper'); // Select the todo wrapper
+const clearBtn = document.querySelector('.clearBtn'); // Select the clear button
 // Event listener for form submission
 form.addEventListener('submit', (e) => {
   e.preventDefault(); 
@@ -57,4 +55,21 @@ const saveTodo = () => {
 const getTodo = () => {
   ul.innerHTML = localStorage.getItem('todoList');
 }
+
+// Function to clear all todo items
+function clearTodos() {
+  ul.innerHTML = ''; // Clear the unordered list
+  localStorage.removeItem('todoList'); // Remove the todo list from localStorage
+}
+// Add a clear button to the form
+// Event listener for the clear button
+clearBtn.addEventListener('click', (e) => {
+  if (ul.innerHTML === '') {
+    alert('No tasks to clear!'); // Alert if there are no tasks
+    return; // Exit the function if no tasks
+  }
+  e.preventDefault(); // Prevent form submission
+  clearTodos(); // Call the function to clear all todo items
+});
+
 window.onload = getTodo;

@@ -6,14 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </html>
   <body>
-    <form class="todoWrapper">
-      <h1>Today's Tasks</h1>
+    <div class="todoWrapper">
+      <h1 class="title">Today's Tasks</h1>
+      <form class="todoForm">
         <input 
           name="todoInput"
           type="text" 
           class="todoInput" 
           placeholder="Add a new task"
           required
+          autofocus
           />
         <button 
           type="submit"
@@ -21,16 +23,21 @@
           aria-label="Add Task">
           Add Task
         </button>
-    
+      </form>
     <div class="todoListWrapper">
         <ul class="todoList">
           <!-- tasks goes Here -->
         </ul>
+        <button 
+          class="clearBtn" 
+          aria-label="Clear All Tasks">
+          Clear All
+        </button> 
     </div>
     <div class="todoFooter">
       <p>Made with ❤️ by Abullah Shalabi</p>
     </div>
-  </form>
+  </div>
   </body>
   <script src="app.js"></script>
 </html>

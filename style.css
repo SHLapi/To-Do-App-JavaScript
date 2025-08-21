@@ -1,8 +1,8 @@
 :root {
-  --primary-color: #6c4e96;
-  --secondary-color: #769771;
-  --text-color: #60395f;
-  --background-color: #293019;
+  --primary-color: #0a2463;
+  --secondary-color: #a4c8e4;
+  --text-color: #261145;
+  --background-color: #1e1b18;
 }
 
 *{
@@ -30,8 +30,8 @@ body{
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
-  color: #60395f;
+.title {
+  color: var(--text-color);
 }
 
 .todoInput {
@@ -44,6 +44,11 @@ h1 {
   width: 300px;
   font-size: 1.2rem;
   color: var(--text-color);
+  transition: all 0.3s ease;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.todoInput::placeholder {
+  color: #46375c;
 }
 
 .todoBtn {
@@ -53,13 +58,13 @@ h1 {
   border: none;
   border-radius: 0px 10px 10px 0px;
   padding: 0.7rem;
-  height: 3rem ;
+  height: 2.8rem ;
   cursor: pointer;
   left: -5px;
   font-size: 1.2rem;
 }
 
-ul li {
+.todoListWrapper ul li {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -75,12 +80,14 @@ ul li {
 }
 ul li span{
   color: #fff;
-  border-radius: 100px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
   padding: 0.2rem 0.5rem;
   cursor: pointer;
 }
 ul li span:hover{
-  background: #d01616;
+  background: #c52222;
 }
 
 .todoList{
@@ -92,11 +99,21 @@ ul li span:hover{
   padding: 0;
   margin: 0;
 }
-.completed{
+.todoListWrapper .completed{
   text-decoration: line-through;
-  color: #ffffff9a;
+  color: #7c7a7a9a;
 }
-
-
-
-
+.todoFooter{
+  color: var(--text-color);
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+.clearBtn {
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
